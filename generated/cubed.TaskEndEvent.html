@@ -33,7 +33,7 @@
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cubed.measure_baseline_memory" href="cubed.measure_baseline_memory.html" />
+    <link rel="next" title="cubed.measure_reserved_memory" href="cubed.measure_reserved_memory.html" />
     <link rel="prev" title="cubed.Spec" href="cubed.Spec.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -93,23 +93,23 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.html">
-     cubed.CoreArray
+    <a class="reference internal" href="cubed.Array.html">
+     cubed.Array
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.compute.html">
-     cubed.CoreArray.compute
+    <a class="reference internal" href="cubed.Array.compute.html">
+     cubed.Array.compute
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.rechunk.html">
-     cubed.CoreArray.rechunk
+    <a class="reference internal" href="cubed.Array.rechunk.html">
+     cubed.Array.rechunk
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.visualize.html">
-     cubed.CoreArray.visualize
+    <a class="reference internal" href="cubed.Array.visualize.html">
+     cubed.Array.visualize
     </a>
    </li>
    <li class="toctree-l2">
@@ -168,8 +168,8 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.measure_baseline_memory.html">
-     cubed.measure_baseline_memory
+    <a class="reference internal" href="cubed.measure_reserved_memory.html">
+     cubed.measure_reserved_memory
     </a>
    </li>
    <li class="toctree-l2">
@@ -339,11 +339,11 @@ title="Edit this page"
 <h1>cubed.TaskEndEvent<a class="headerlink" href="#cubed-taskendevent" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="cubed.TaskEndEvent">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cubed.</span></span><span class="sig-name descname"><span class="pre">TaskEndEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_create_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_start_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_end_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_result_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.TaskEndEvent" title="Permalink to this definition">#</a></dt>
-<dd><p>Callback information about a completed task.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cubed.</span></span><span class="sig-name descname"><span class="pre">TaskEndEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tasks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_create_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_start_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_end_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_result_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.TaskEndEvent" title="Permalink to this definition">#</a></dt>
+<dd><p>Callback information about a completed task (or tasks).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="cubed.TaskEndEvent.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_create_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_start_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_end_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_result_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.TaskEndEvent.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">array_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tasks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_create_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_start_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_end_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_result_tstamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peak_memory_end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.TaskEndEvent.__init__" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
@@ -353,7 +353,7 @@ title="Edit this page"
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#cubed.TaskEndEvent.__init__" title="cubed.TaskEndEvent.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(array_name[, task_create_tstamp, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#cubed.TaskEndEvent.__init__" title="cubed.TaskEndEvent.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(array_name[, num_tasks, ...])</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -371,19 +371,22 @@ title="Edit this page"
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">function_start_tstamp</span></code></p></td>
 <td><p>Timestamp of when the function started executing on the remote worker.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">peak_memory_end</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">num_tasks</span></code></p></td>
+<td><p>Number of tasks that this event applies to (default 1).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">peak_memory_end</span></code></p></td>
 <td><p>Peak memory usage on the remote worker after the function finishes executing.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">peak_memory_start</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">peak_memory_start</span></code></p></td>
 <td><p>Peak memory usage on the remote worker before the function starts executing.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_create_tstamp</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_create_tstamp</span></code></p></td>
 <td><p>Timestamp of when the task was created by the client.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_result_tstamp</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_result_tstamp</span></code></p></td>
 <td><p>Timestamp of when the result of the task was received by the client.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_name</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">array_name</span></code></p></td>
 <td><p>Name of the array that the task is for.</p></td>
 </tr>
 </tbody>
@@ -407,10 +410,10 @@ title="Edit this page"
             <p class="prev-next-title">cubed.Spec</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="cubed.measure_baseline_memory.html" title="next page">
+    <a class='right-next' id="next-link" href="cubed.measure_reserved_memory.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">cubed.measure_baseline_memory</p>
+        <p class="prev-next-title">cubed.measure_reserved_memory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

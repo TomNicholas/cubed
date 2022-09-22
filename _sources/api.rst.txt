@@ -13,10 +13,10 @@ Creation Functions.
     :nosignatures:
     :toctree: generated/
 
-    CoreArray
-    CoreArray.compute
-    CoreArray.rechunk
-    CoreArray.visualize
+    Array
+    Array.compute
+    Array.rechunk
+    Array.visualize
     compute
     visualize
 
@@ -64,7 +64,7 @@ Runtime
     Callback
     Spec
     TaskEndEvent
-    measure_baseline_memory
+    measure_reserved_memory
 
 Executors
 =========

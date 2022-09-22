@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>cubed.measure_baseline_memory &#8212; Cubed</title>
+    <title>cubed.Array.visualize &#8212; Cubed</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -33,8 +33,8 @@
     <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cubed.runtime.executors.beam.BeamDagExecutor" href="cubed.runtime.executors.beam.BeamDagExecutor.html" />
-    <link rel="prev" title="cubed.TaskEndEvent" href="cubed.TaskEndEvent.html" />
+    <link rel="next" title="cubed.compute" href="cubed.compute.html" />
+    <link rel="prev" title="cubed.Array.rechunk" href="cubed.Array.rechunk.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -93,23 +93,23 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.html">
-     cubed.CoreArray
+    <a class="reference internal" href="cubed.Array.html">
+     cubed.Array
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.compute.html">
-     cubed.CoreArray.compute
+    <a class="reference internal" href="cubed.Array.compute.html">
+     cubed.Array.compute
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.rechunk.html">
-     cubed.CoreArray.rechunk
+    <a class="reference internal" href="cubed.Array.rechunk.html">
+     cubed.Array.rechunk
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cubed.CoreArray.visualize.html">
-     cubed.CoreArray.visualize
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     cubed.Array.visualize
     </a>
    </li>
    <li class="toctree-l2">
@@ -167,9 +167,9 @@
      cubed.TaskEndEvent
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     cubed.measure_baseline_memory
+   <li class="toctree-l2">
+    <a class="reference internal" href="cubed.measure_reserved_memory.html">
+     cubed.measure_reserved_memory
     </a>
    </li>
    <li class="toctree-l2">
@@ -275,7 +275,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/tomwhite/cubed/issues/new?title=Issue%20on%20page%20%2Fgenerated/cubed.measure_baseline_memory.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/tomwhite/cubed/issues/new?title=Issue%20on%20page%20%2Fgenerated/cubed.Array.visualize.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -292,7 +292,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/tomwhite/cubed/edit/master/generated/cubed.measure_baseline_memory.rst"
+        <a href="https://github.com/tomwhite/cubed/edit/master/generated/cubed.Array.visualize.rst"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -323,7 +323,7 @@ title="Edit this page"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>cubed.measure_baseline_memory</h1>
+                <h1>cubed.Array.visualize</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -335,22 +335,28 @@ title="Edit this page"
                 
               <div>
                 
-  <section id="cubed-measure-baseline-memory">
-<h1>cubed.measure_baseline_memory<a class="headerlink" href="#cubed-measure-baseline-memory" title="Permalink to this headline">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="cubed.measure_baseline_memory">
-<span class="sig-prename descclassname"><span class="pre">cubed.</span></span><span class="sig-name descname"><span class="pre">measure_baseline_memory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.measure_baseline_memory" title="Permalink to this definition">#</a></dt>
-<dd><p>Measures the baseline memory use for a given executor runtime.</p>
+  <section id="cubed-array-visualize">
+<h1>cubed.Array.visualize<a class="headerlink" href="#cubed-array-visualize" title="Permalink to this headline">#</a></h1>
+<dl class="py method">
+<dt class="sig sig-object py" id="cubed.Array.visualize">
+<span class="sig-prename descclassname"><span class="pre">Array.</span></span><span class="sig-name descname"><span class="pre">visualize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cubed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_graph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.Array.visualize" title="Permalink to this definition">#</a></dt>
+<dd><p>Produce a visualization of the computation graph for this array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>executor</strong> (<em>cubed.runtime.types.Executor</em>) – The executor to use to run the computation. It must be an executor that
-reports peak memory, such as Lithops or Modal.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – The name of the file to write to disk. If the provided <code class="docutils literal notranslate"><span class="pre">filename</span></code>
+doesn’t include an extension, ‘.svg’ will be used by default.</p></li>
+<li><p><strong>format</strong> (<em>{'png'</em><em>, </em><em>'pdf'</em><em>, </em><em>'dot'</em><em>, </em><em>'svg'</em><em>, </em><em>'jpeg'</em><em>, </em><em>'jpg'}</em><em>, </em><em>optional</em>) – Format in which to write output file.  Default is ‘svg’.</p></li>
+<li><p><strong>optimize_graph</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the graph is optimized before rendering.  Otherwise,
+the graph is displayed as is. Default is True.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The memory used by the runtime in bytes.</p>
+<dd class="field-even"><p>An IPython SVG image if IPython can be imported (for rendering
+in a notebook), otherwise None.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
+<dd class="field-odd"><p>IPython.display.SVG, or None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -365,17 +371,17 @@ reports peak memory, such as Lithops or Modal.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="cubed.TaskEndEvent.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="cubed.Array.rechunk.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">cubed.TaskEndEvent</p>
+            <p class="prev-next-title">cubed.Array.rechunk</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="cubed.runtime.executors.beam.BeamDagExecutor.html" title="next page">
+    <a class='right-next' id="next-link" href="cubed.compute.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">cubed.runtime.executors.beam.BeamDagExecutor</p>
+        <p class="prev-next-title">cubed.compute</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
