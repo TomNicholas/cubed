@@ -19,15 +19,4 @@
 
    
    
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Spec.allowed_mem
-      ~Spec.executor
-      ~Spec.max_mem
-      ~Spec.reserved_mem
-      ~Spec.storage_options
-      ~Spec.work_dir
-   
    
