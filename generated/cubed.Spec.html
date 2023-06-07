@@ -123,8 +123,21 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">For users</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/why-cubed.html">Why Cubed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../user-guide/index.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/executors.html">Executors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/storage.html">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/memory.html">Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/reliability.html">Reliability</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/tomwhite/cubed/tree/main/examples/README.md">Examples</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cubed.Array.html">cubed.Array</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.Array.compute.html">cubed.Array.compute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.Array.rechunk.html">cubed.Array.rechunk</a></li>
@@ -141,16 +154,15 @@
 <li class="toctree-l2"><a class="reference internal" href="cubed.Callback.html">cubed.Callback</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">cubed.Spec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.TaskEndEvent.html">cubed.TaskEndEvent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.measure_reserved_memory.html">cubed.measure_reserved_memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cubed.measure_reserved_mem.html">cubed.measure_reserved_mem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.beam.BeamDagExecutor.html">cubed.runtime.executors.beam.BeamDagExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.lithops.LithopsDagExecutor.html">cubed.runtime.executors.lithops.LithopsDagExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.modal_async.AsyncModalDagExecutor.html">cubed.runtime.executors.modal_async.AsyncModalDagExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.python.PythonDagExecutor.html">cubed.runtime.executors.python.PythonDagExecutor</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../array_api.html">Python Array API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../related_projects.html">Related Projects</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/tomwhite/cubed/tree/main/examples/README.md">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../array-api.html">Python Array API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related-projects.html">Related Projects</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">For developers</span></p>
 <ul class="nav bd-sidenav">
@@ -328,13 +340,51 @@ document.write(`
 <dl class="py method">
 <dt class="sig sig-object py" id="cubed.Spec.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">work_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_mem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allowed_mem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reserved_mem</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.Spec.__init__" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
+<dd><p>Specify resources available to run a computation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_dir</strong> (<em>str</em><em> or </em><em>None</em>) – The directory path (specified as an fsspec URL) used for storing intermediate data.</p></li>
+<li><p><strong>max_mem</strong> (<em>int</em><em>, </em><em>optional</em>) – <strong>Deprecated</strong>. The maximum memory available to a worker for data use for the computation, in bytes.</p></li>
+<li><p><strong>allowed_mem</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – <p>The total memory available to a worker for running a task, in bytes.</p>
+<p>If int it should be &gt;=0. If str it should be of form &lt;value&gt;&lt;unit&gt; where unit can be kB, MB, GB, TB etc.
+This includes any <code class="docutils literal notranslate"><span class="pre">reserved_mem</span></code> that has been set.</p>
+</p></li>
+<li><p><strong>reserved_mem</strong> (<em>int</em><em> or </em><em>str</em><em>, </em><em>optional</em>) – <p>The memory reserved on a worker for non-data use when running a task, in bytes.</p>
+<p>If int it should be &gt;=0. If str it should be of form &lt;value&gt;&lt;unit&gt; where unit can be kB, MB, GB, TB etc.</p>
+</p></li>
+<li><p><strong>executor</strong> (<em>Executor</em><em>, </em><em>optional</em>) – The default executor for running computations.</p></li>
+<li><p><strong>storage_options</strong> (<em>dict</em><em>, </em><em>optional</em>) – Storage options to be passed to fsspec.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#cubed.Spec.__init__" title="cubed.Spec.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([work_dir, max_mem, allowed_mem, ...])</p></td>
-<td><p></p></td>
+<td><p>Specify resources available to run a computation.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">allowed_mem</span></code></p></td>
+<td><p>The total memory available to a worker for running a task, in bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">executor</span></code></p></td>
+<td><p>The default executor for running computations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reserved_mem</span></code></p></td>
+<td><p>The memory reserved on a worker for non-data use when running a task, in bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">storage_options</span></code></p></td>
+<td><p>Storage options to be passed to fsspec.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">work_dir</span></code></p></td>
+<td><p>The directory path (specified as an fsspec URL) used for storing intermediate data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -417,7 +467,7 @@ By Tom White
     
   <p class="copyright">
     
-      © Copyright 2022, Tom White.
+      © Copyright 2022-2023, Tom White.
       <br/>
     
   </p>
