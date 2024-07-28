@@ -45,9 +45,12 @@ Chunk-specific functions
 
     apply_gufunc
     map_blocks
+    map_overlap
 
 Non-standardised functions
 ==========================
+
+These are functions that have not (yet) been included in the Python Array API Standard.
 
 .. currentmodule:: cubed
 .. autosummary::
@@ -56,6 +59,7 @@ Non-standardised functions
 
     nanmean
     nansum
+    pad
 
 Random number generation
 ========================
@@ -88,7 +92,9 @@ Executors
     :nosignatures:
     :toctree: generated/
 
-    beam.BeamDagExecutor
-    lithops.LithopsDagExecutor
-    modal_async.AsyncModalDagExecutor
-    python.PythonDagExecutor
+    local.SingleThreadedExecutor
+    local.ThreadsExecutor
+    local.ProcessesExecutor
+    beam.BeamExecutor
+    lithops.LithopsExecutor
+    modal.ModalExecutor

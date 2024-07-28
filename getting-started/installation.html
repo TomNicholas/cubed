@@ -14,32 +14,32 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=550e7ebd"></script>
+    <script src="../_static/documentation_options.js?v=c051302b"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'getting-started/installation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -54,27 +54,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -96,8 +92,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -121,6 +122,8 @@
         <div class="sidebar-primary-item">
 
   
+    
+  
 
 <a class="navbar-brand logo" href="../index.html">
   
@@ -136,7 +139,7 @@
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -147,23 +150,23 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">For users</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Getting Started</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="why-cubed.html">Why Cubed?</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="demo.html">Demo</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../user-guide/index.html">User Guide</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../user-guide/index.html">User Guide</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/executors.html">Executors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/storage.html">Storage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/memory.html">Memory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/reliability.html">Reliability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/scaling.html">Scaling</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference external" href="https://cubed-dev.github.io/cubed/cubed-intro.slides.html">Intro slides</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/tomwhite/cubed/tree/main/examples/README.md">Examples</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.html">cubed.Array</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.compute.html">cubed.Array.compute</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.rechunk.html">cubed.Array.rechunk</a></li>
@@ -176,19 +179,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.to_zarr.html">cubed.to_zarr</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.apply_gufunc.html">cubed.apply_gufunc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.map_blocks.html">cubed.map_blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.map_overlap.html">cubed.map_overlap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.nanmean.html">cubed.nanmean</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.nansum.html">cubed.nansum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.pad.html">cubed.pad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.random.random.html">cubed.random.random</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Callback.html">cubed.Callback</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Spec.html">cubed.Spec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.TaskEndEvent.html">cubed.TaskEndEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../generated/cubed.measure_reserved_mem.html">cubed.measure_reserved_mem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.beam.BeamDagExecutor.html">cubed.runtime.executors.beam.BeamDagExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.lithops.LithopsDagExecutor.html">cubed.runtime.executors.lithops.LithopsDagExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.modal_async.AsyncModalDagExecutor.html">cubed.runtime.executors.modal_async.AsyncModalDagExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.python.PythonDagExecutor.html">cubed.runtime.executors.python.PythonDagExecutor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.local.SingleThreadedExecutor.html">cubed.runtime.executors.local.SingleThreadedExecutor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.local.ThreadsExecutor.html">cubed.runtime.executors.local.ThreadsExecutor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.local.ProcessesExecutor.html">cubed.runtime.executors.local.ProcessesExecutor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.beam.BeamExecutor.html">cubed.runtime.executors.beam.BeamExecutor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.lithops.LithopsExecutor.html">cubed.runtime.executors.lithops.LithopsExecutor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.runtime.executors.modal.ModalExecutor.html">cubed.runtime.executors.modal.ModalExecutor</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../array-api.html">Python Array API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../related-projects.html">Related Projects</a></li>
 </ul>
@@ -213,7 +220,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -222,14 +229,14 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -307,10 +314,10 @@
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -318,14 +325,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -418,8 +425,15 @@ $ python -m pip install &quot;cubed[modal]&quot;        # Install optional depen
 <span class="w">    </span><span class="na">&quot;s3fs&quot;,</span>
 <span class="na">]</span>
 <span class="na">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
-<span class="w">    </span><span class="na">&quot;apache-beam&quot;,  # beam but not gcsfs as tests use local beam runner</span>
 <span class="w">    </span><span class="na">&quot;cubed[diagnostics,lithops]&quot;,  # modal tests separate due to conflicting package reqs</span>
+<span class="w">    </span><span class="na">&quot;dill&quot;,</span>
+<span class="w">    </span><span class="na">&quot;numpy_groupies&quot;,</span>
+<span class="w">    </span><span class="na">&quot;pytest&quot;,</span>
+<span class="w">    </span><span class="na">&quot;pytest-cov&quot;,</span>
+<span class="w">    </span><span class="na">&quot;pytest-mock&quot;,</span>
+<span class="na">]</span>
+<span class="na">test-beam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">[</span>
+<span class="w">    </span><span class="na">&quot;cubed[beam,diagnostics]&quot;,</span>
 <span class="w">    </span><span class="na">&quot;dill&quot;,</span>
 <span class="w">    </span><span class="na">&quot;numpy_groupies&quot;,</span>
 <span class="w">    </span><span class="na">&quot;pytest&quot;,</span>
@@ -463,7 +477,7 @@ $ python -m pip install &quot;cubed[modal]&quot;        # Install optional depen
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -551,8 +565,8 @@ By Tom White
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
