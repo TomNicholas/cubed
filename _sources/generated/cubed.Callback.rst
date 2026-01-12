@@ -16,11 +16,20 @@
       ~Callback.__init__
       ~Callback.on_compute_end
       ~Callback.on_compute_start
+      ~Callback.on_operation_end
       ~Callback.on_operation_start
       ~Callback.on_task_end
+      ~Callback.register
+      ~Callback.unregister
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Callback.active
    
    

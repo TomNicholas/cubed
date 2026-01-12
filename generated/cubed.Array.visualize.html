@@ -28,18 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=c051302b"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/documentation_options.js?v=9aa3a056"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'generated/cubed.Array.visualize';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -131,8 +134,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/cubed-logo.svg" class="logo__image only-light" alt="Cubed - Home"/>
+    <script>document.write(`<img src="../_static/cubed-logo.svg" class="logo__image only-dark" alt="Cubed - Home"/>`);</script>
   
-    <p class="title logo__title">Cubed</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -150,22 +159,28 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">For users</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../getting-started/index.html">Getting Started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../getting-started/why-cubed.html">Why Cubed?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting-started/installation.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting-started/demo.html">Demo</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../user-guide/index.html">User Guide</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/executors.html">Executors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/storage.html">Storage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/memory.html">Memory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/reliability.html">Reliability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/optimization.html">Optimization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/scaling.html">Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/gpus.html">GPU Support</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference external" href="https://cubed-dev.github.io/cubed/cubed-intro.slides.html">Intro slides</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://github.com/tomwhite/cubed/tree/main/examples/README.md">Examples</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../examples/index.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/how-to-run.html">How to run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/basic-array-ops.html">Basic array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/zarr.html">Zarr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/xarray.html">Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/rechunking.html">Rechunking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/icechunk.html">Icechunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/pangeo.html">Pangeo</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../api.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cubed.Array.html">cubed.Array</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.Array.compute.html">cubed.Array.compute</a></li>
@@ -180,6 +195,8 @@
 <li class="toctree-l2"><a class="reference internal" href="cubed.apply_gufunc.html">cubed.apply_gufunc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.map_blocks.html">cubed.map_blocks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.map_overlap.html">cubed.map_overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cubed.rechunk.html">cubed.rechunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cubed.isin.html">cubed.isin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.nanmean.html">cubed.nanmean</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.nansum.html">cubed.nansum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.pad.html">cubed.pad</a></li>
@@ -188,16 +205,13 @@
 <li class="toctree-l2"><a class="reference internal" href="cubed.Spec.html">cubed.Spec</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.TaskEndEvent.html">cubed.TaskEndEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cubed.measure_reserved_mem.html">cubed.measure_reserved_mem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.local.SingleThreadedExecutor.html">cubed.runtime.executors.local.SingleThreadedExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.local.ThreadsExecutor.html">cubed.runtime.executors.local.ThreadsExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.local.ProcessesExecutor.html">cubed.runtime.executors.local.ProcessesExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.beam.BeamExecutor.html">cubed.runtime.executors.beam.BeamExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.lithops.LithopsExecutor.html">cubed.runtime.executors.lithops.LithopsExecutor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cubed.runtime.executors.modal.ModalExecutor.html">cubed.runtime.executors.modal.ModalExecutor</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../array-api.html">Python Array API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why-cubed.html">Why Cubed?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../related-projects.html">Related Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../articles.html">Articles and Presentations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">For developers</span></p>
 <ul class="nav bd-sidenav">
@@ -369,7 +383,7 @@ document.write(`
 <h1>cubed.Array.visualize<a class="headerlink" href="#cubed-array-visualize" title="Link to this heading">#</a></h1>
 <dl class="py method">
 <dt class="sig sig-object py" id="cubed.Array.visualize">
-<span class="sig-prename descclassname"><span class="pre">Array.</span></span><span class="sig-name descname"><span class="pre">visualize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cubed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_graph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_hidden</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.Array.visualize" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">Array.</span></span><span class="sig-name descname"><span class="pre">visualize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cubed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_graph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimize_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show_hidden</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">engine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cubed.Array.visualize" title="Link to this definition">#</a></dt>
 <dd><p>Produce a visualization of the computation graph for this array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -457,7 +471,7 @@ in a notebook), otherwise None.</p>
   <div class="footer-item">
     
 <p class="component-author">
-By Tom White
+By Cubed contributors
 </p>
 
   </div>
@@ -467,7 +481,7 @@ By Tom White
 
   <p class="copyright">
     
-      © Copyright 2022-2024, Tom White.
+      © Copyright 2022-2025.
       <br/>
     
   </p>

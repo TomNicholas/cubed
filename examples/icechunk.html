@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Icechunk &#8212; Cubed</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9aa3a056"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/icechunk';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pangeo" href="pangeo.html" />
+    <link rel="prev" title="Rechunking" href="rechunking.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/cubed-logo.svg" class="logo__image only-light" alt="Cubed - Home"/>
+    <script>document.write(`<img src="../_static/cubed-logo.svg" class="logo__image only-dark" alt="Cubed - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">For users</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../user-guide/index.html">User Guide</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/executors.html">Executors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/storage.html">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/memory.html">Memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/reliability.html">Reliability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/scaling.html">Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/diagnostics.html">Diagnostics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/gpus.html">GPU Support</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="how-to-run.html">How to run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-array-ops.html">Basic array operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zarr.html">Zarr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xarray.html">Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rechunking.html">Rechunking</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Icechunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pangeo.html">Pangeo</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.html">cubed.Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.compute.html">cubed.Array.compute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.rechunk.html">cubed.Array.rechunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Array.visualize.html">cubed.Array.visualize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.compute.html">cubed.compute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.visualize.html">cubed.visualize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.from_array.html">cubed.from_array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.from_zarr.html">cubed.from_zarr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.store.html">cubed.store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.to_zarr.html">cubed.to_zarr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.apply_gufunc.html">cubed.apply_gufunc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.map_blocks.html">cubed.map_blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.map_overlap.html">cubed.map_overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.rechunk.html">cubed.rechunk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.isin.html">cubed.isin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.nanmean.html">cubed.nanmean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.nansum.html">cubed.nansum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.pad.html">cubed.pad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.random.random.html">cubed.random.random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Callback.html">cubed.Callback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.Spec.html">cubed.Spec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.TaskEndEvent.html">cubed.TaskEndEvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../generated/cubed.measure_reserved_mem.html">cubed.measure_reserved_mem</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../array-api.html">Python Array API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why-cubed.html">Why Cubed?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../related-projects.html">Related Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../articles.html">Articles and Presentations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">For developers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../design.html">Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../operations.html">Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../computation.html">Computation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/cubed-dev/cubed" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cubed-dev/cubed/edit/main/examples/icechunk.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/cubed-dev/cubed/issues/new?title=Issue%20on%20page%20%2Fexamples/icechunk.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Icechunk</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-to-icechunk">Write to Icechunk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-from-icechunk">Read from Icechunk</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="icechunk">
+<h1>Icechunk<a class="headerlink" href="#icechunk" title="Link to this heading">#</a></h1>
+<p>This example shows how to perform large-scale distributed writes to Icechunk using Cubed
+(based on the examples for using <a class="reference external" href="https://icechunk.io/en/latest/dask/">Icechunk with Dask</a>).</p>
+<p>Install the package pre-requisites by running the following:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>cubed<span class="w"> </span>icechunk
+</pre></div>
+</div>
+<p>Start by creating an Icechunk store.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">icechunk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+
+<span class="c1"># initialize the icechunk store</span>
+<span class="n">storage</span> <span class="o">=</span> <span class="n">icechunk</span><span class="o">.</span><span class="n">local_filesystem_storage</span><span class="p">(</span><span class="n">tempfile</span><span class="o">.</span><span class="n">TemporaryDirectory</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="n">repo</span> <span class="o">=</span> <span class="n">icechunk</span><span class="o">.</span><span class="n">Repository</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">storage</span><span class="p">)</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">writable_session</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  <span class=" -Color -Color-Faint">2026-01-12T19:44:24.010082Z</span> <span class=" -Color -Color-Yellow"> WARN</span> <span class=" -Color -Color-Bold -Color-Bold-Yellow">icechunk::storage::object_store</span><span class=" -Color -Color-Yellow">: The LocalFileSystem storage is not safe for concurrent commits. If more than one thread/process will attempt to commit at the same time, prefer using object stores.</span>
+    <span class=" -Color -Color-Faint">at</span> icechunk/src/storage/object_store.rs:81
+</pre></div>
+</div>
+</div>
+</div>
+<section id="write-to-icechunk">
+<h2>Write to Icechunk<a class="headerlink" href="#write-to-icechunk" title="Link to this heading">#</a></h2>
+<p>Use <code class="docutils literal notranslate"><span class="pre">cubed.icechunk.store_icechunk</span></code> to write a Cubed array to an Icechunk store.
+The API follows that of <a class="reference internal" href="../generated/cubed.store.html#cubed.store" title="cubed.store"><code class="xref py py-func docutils literal notranslate"><span class="pre">cubed.store()</span></code></a>.</p>
+<p>First create a Cubed array to write:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cubed</span>
+<span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">cubed_chunks</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">cubed_array</span> <span class="o">=</span> <span class="n">cubed</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="n">shape</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="n">cubed_chunks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now create the Zarr array you will write to.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zarr</span>
+
+<span class="n">zarr_chunks</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="n">store</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">store</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">zarray</span> <span class="o">=</span> <span class="n">group</span><span class="o">.</span><span class="n">create_array</span><span class="p">(</span>
+    <span class="s2">&quot;array&quot;</span><span class="p">,</span>
+    <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">,</span>
+    <span class="n">chunks</span><span class="o">=</span><span class="n">zarr_chunks</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;f8&quot;</span><span class="p">,</span>
+    <span class="n">fill_value</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="s2">&quot;nan&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;initialize array&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;800DZ30F3KFS4VNJYHA0&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the chunks in the store are a divisor of the Cubed chunks. This means each individual write task is independent, and will not conflict. It is your responsibility to ensure that such conflicts are avoided.</p>
+<p>First remember to fork the session before re-opening the Zarr array. <code class="docutils literal notranslate"><span class="pre">store_icechunk</span></code> will merge all the remote write sessions on the cluster before returning back a single merged <code class="docutils literal notranslate"><span class="pre">ForkSession</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cubed.icechunk</span><span class="w"> </span><span class="kn">import</span> <span class="n">store_icechunk</span>
+
+<span class="n">session</span> <span class="o">=</span> <span class="n">repo</span><span class="o">.</span><span class="n">writable_session</span><span class="p">(</span><span class="s2">&quot;main&quot;</span><span class="p">)</span>
+<span class="n">fork</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">fork</span><span class="p">()</span>
+<span class="n">zarray</span> <span class="o">=</span> <span class="n">zarr</span><span class="o">.</span><span class="n">open_array</span><span class="p">(</span><span class="n">fork</span><span class="o">.</span><span class="n">store</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;array&quot;</span><span class="p">)</span>
+<span class="n">remote_session</span> <span class="o">=</span> <span class="n">store_icechunk</span><span class="p">(</span>
+    <span class="n">sources</span><span class="o">=</span><span class="p">[</span><span class="n">cubed_array</span><span class="p">],</span>
+    <span class="n">targets</span><span class="o">=</span><span class="p">[</span><span class="n">zarray</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Merge the remote session in to the local Session</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">remote_session</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally commit your changes!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">(</span><span class="s2">&quot;wrote a cubed array!&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KZ2372J26MPG25B8NQ90
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="read-from-icechunk">
+<h2>Read from Icechunk<a class="headerlink" href="#read-from-icechunk" title="Link to this heading">#</a></h2>
+<p>Use <a class="reference internal" href="../generated/cubed.from_zarr.html#cubed.from_zarr" title="cubed.from_zarr"><code class="xref py py-func docutils literal notranslate"><span class="pre">cubed.from_zarr()</span></code></a> to read from Icechunk - note that no special Icechunk-specific function is needed in this case.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cubed</span><span class="o">.</span><span class="n">from_zarr</span><span class="p">(</span><span class="n">store</span><span class="o">=</span><span class="n">session</span><span class="o">.</span><span class="n">store</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="s2">&quot;array&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">File /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages/IPython/core/formatters.py:406,</span> in <span class="ni">BaseFormatter.__call__</span><span class="nt">(self, obj)</span>
+<span class="g g-Whitespace">    </span><span class="mi">404</span>     <span class="n">method</span> <span class="o">=</span> <span class="n">get_real_method</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">print_method</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">405</span>     <span class="k">if</span> <span class="n">method</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">406</span>         <span class="k">return</span> <span class="n">method</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">407</span>     <span class="k">return</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">408</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages/cubed/array_api/array_object.py:50,</span> in <span class="ni">Array._repr_html_</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="k">def</span><span class="w"> </span><span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">50</span>     <span class="kn">from</span><span class="w"> </span><span class="nn">cubed.diagnostics.widgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_template</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span>     <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="n">grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_svg</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">ARRAY_SVG_SIZE</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.12.12</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cubed</span><span class="o">/</span><span class="n">diagnostics</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">.rich</span><span class="w"> </span><span class="kn">import</span> <span class="n">RichProgressBar</span> <span class="k">as</span> <span class="n">ProgressBar</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ProgressBar&quot;</span><span class="p">]</span>
+
+<span class="n">File</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.12.12</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.12</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">cubed</span><span class="o">/</span><span class="n">diagnostics</span><span class="o">/</span><span class="n">rich</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">from</span><span class="w"> </span><span class="nn">rich.console</span><span class="w"> </span><span class="kn">import</span> <span class="n">RenderableType</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">rich.progress</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">BarColumn</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">MofNCompleteColumn</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>     <span class="mi">15</span>     <span class="n">TimeElapsedColumn</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span><span class="w"> </span><span class="nn">rich.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">Text</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;rich&#39;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cubed.Array&lt;array-005, shape=(100, 100), dtype=float64, chunks=((10, 10, 10, 10, 10, 10, 10, 10, 10, 10), (10, 10, 10, 10, 10, 10, 10, 10, 10, 10))&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rechunking.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Rechunking</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pangeo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pangeo</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#write-to-icechunk">Write to Icechunk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-from-icechunk">Read from Icechunk</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cubed contributors
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022-2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
